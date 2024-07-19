@@ -1,30 +1,30 @@
-export default function Profile () {
-    return <> 
-    <div>
-  <div>
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-      alt="User avatar"
-    />
-    <p>Petra Marica</p>
-    <p>@pmarica</p>
-    <p>Salvador, Brasil</p>
-  </div>
+export default Profile;
 
-  <ul>
-    <li>
-      <span>Followers</span>
-      <span>1000</span>
-    </li>
-    <li>
-      <span>Views</span>
-      <span>2000</span>
-    </li>
-    <li>
-      <span>Likes</span>
-      <span>3000</span>
-    </li>
-  </ul>
-</div>
-</>
+
+const Profile (name,tag,location,image, stats) => {
+    return (
+        <div className="profile"> 
+            <div className="profile-elements">
+               <img src={image} alt="User avatar" className="user-avatar"/>
+               <p className="name">{name}</p>
+               <p className="tag">{tag}</p>
+               <p className="location">{location}</p>
+            </div>
+
+            <ul className="stats">
+               <li>
+                  <span className="stats-item-name">Followers</span>
+                  <span className="stats-item-description">{stats.followers}</span>
+                </li>
+               <li>
+                  <span className="stats-item-name">Views</span>
+                  <span className="stats-item-description">{stats.views}</span>
+                </li>
+               <li>
+                  <span className="stats-item-name">Likes</span>
+                  <span className="stats-item-description">{stats.likes}</span>
+                </li>
+            </ul>
+        </div>
+    )
 }
