@@ -1,7 +1,7 @@
 export default Profile;
 
 
-const Profile (name,tag,location,image, stats) => {
+const Profile = (name,tag,location,image, stats) => {
     return (
         <div className="profile"> 
             <div className="profile-elements">
